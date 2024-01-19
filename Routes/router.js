@@ -50,6 +50,9 @@ const router = new express.Router()
       // delete project
       router.delete('/user-projects/remove/:id',middlewareJwt,projectcontroller.deleteProject)
 
+      //edit profile
+      router.put('/user/edit',middlewareJwt,multerConfig.single('profile'),userController.editUser)
+
 
 
 // export router 
